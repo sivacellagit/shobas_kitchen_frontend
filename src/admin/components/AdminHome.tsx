@@ -32,8 +32,8 @@ const AdminHome = () => {
       try {
         console.log("Fetching dashboard stats...");
         const res = await api("/admin/dashboard-stats/");
-        console.log("After Fetching dashboard stats...");
         setStats(res.data);
+        console.log("After Fetching dashboard stats...", res.data);
       } catch (err) {
         console.error("Error fetching dashboard stats", err);
       }
